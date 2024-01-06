@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <title>Halaman Beranda</title>
+</head>
+<body>
+    <h1>Selamat Datang di Toko Online</h1>
+    <ul>
+        {% for product in products %}
+            <li>
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" style="width:100px;height:100px;">
+                <strong>{{ product.name }}</strong>
+                <p>{{ product.description }}</p>
+                <p>Harga: {{ product.price }}</p>
+                <a href="/purchase-form/{{ product.id }}">Beli Sekarang</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Proses Checkout</title>
+</head>
+<body>
+    <h1>Proses Checkout</h1>
+    <p>Produk: {{ purchase.product.name }}</p>
+    <p>Jumlah: {{ purchase.quantity }}</p>
+    <p>Total Harga: {{ purchase.total_price }}</p>
+    <form action="/process-payment/{{ purchase.id }}/" method="post">
+        {% csrf_token %}
+        <button type="submit">Proses Pembayaran</button>
+    </form>
+</body>
+</html>

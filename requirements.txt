@@ -1,0 +1,5 @@
+Django==3.2.12
+fastapi==0.68.0
+django-rest-framework==3.13.1
+moviepy==1.0.3
+pillow==8.4.0
